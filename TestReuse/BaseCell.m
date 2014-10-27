@@ -15,7 +15,7 @@
 {
     self = [super initWithCoder:coder];
     if (self) {
-        NSLog(@"[%s] %@", __PRETTY_FUNCTION__, [self reuseIdentifier]);
+        DLog(@"%@", [self reuseIdentifier]);
     }
     return self;
 }
@@ -23,14 +23,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
-//    NSLog(@"[%s] %@", __PRETTY_FUNCTION__, [self reuseIdentifier]);
-    NSLog(@"[%s] reuseIdentifier:%@;", __PRETTY_FUNCTION__, [self reuseIdentifier]);
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    DLog(@"reuseIdentifier:%@;", [self reuseIdentifier]);
 }
 
 @end

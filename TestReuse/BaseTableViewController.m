@@ -37,7 +37,6 @@
     }
     self.showItems = newItems;
 
-//    UINib* nib = [UINib nibWithNibName:@"BaseCell" bundle:nil];
     [self.tableView registerNib:[UINib nibWithNibName:@"BaseCell" bundle:nil] forCellReuseIdentifier:@"BaseCell"];
 }
 
@@ -52,8 +51,7 @@
 {
     BaseCell* cell = [tableView dequeueReusableCellWithIdentifier:@"BaseCell"];
     NSAssert(cell, @"cell registered but not created");
-//    DLog(@"cell:[%p]", cell);
-    NSLog(@"[%s] cell:[%p]", __PRETTY_FUNCTION__, cell);
+    DLog(@"cell:[%p]", cell);
     
     cell.labelTitle.text = self.showItems[indexPath.row];
 
